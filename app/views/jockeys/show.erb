@@ -1,16 +1,14 @@
-<head>
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-</head>
+
 
 <body>
   <header>
-    <h1> All of My Horses </h1>
+    <h1> This Jockey's Horses </h1>
   </header
-  <% @horses.each do |horse| %>
+  <% @jockey.horses.each do |horse| %>
     <h3><a href="/horses/<%= horse.id %>"><%= horse.name %></a></h3>
     <p><%= horse.age %></p>
     <p><%= horse.total_winnings %></p>
     <p><%= horse.breed_id %></p>
-    
+
   <% end %>
 </body>
