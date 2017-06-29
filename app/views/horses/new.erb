@@ -1,0 +1,26 @@
+
+
+<html>
+  <head>
+    <link rel="stylesheet" href="application.css">
+    <title>Make a New Horse</title>
+  </head>
+
+  <body>
+  <p>What type of horse would you like to create? </p>
+  <form action="/horses" method="post">
+    <label>Name</label>
+    <input type="text" name="horse[name]"/><br/>
+    <label>Age</label>
+    <textarea name="horse[age]"></textarea><br/>
+    <label>Total Winnings</label>
+    <input type="text" name="horse[total_winnings]"/><br/>
+    <label>Breed</label>
+    <input type="text" name="horse[breed_id]"/><br/>
+    <label>Jockey</label>
+    <input type="text" name="horse[jockey_id]"/><br/>
+    <input type='submit'/>
+  </form>
+  </body>
+
+</html>

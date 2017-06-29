@@ -1,0 +1,25 @@
+
+<html>
+  <head>
+    <link rel="stylesheet" href="/css/application.css">
+    <title>Your Horse</title>
+  </head>
+
+  <body>
+    <h1><%= @horse.name %></h1>
+
+    <p>Age: <%= @horse.age %></p>
+    <p>Total Winnings: $<%= @horse.total_winnings %></p>
+    <p>Breed: <%= @horse.breed.name %></p>
+    <p>Jockey: <%= @horse.jockey.name %></p>
+
+
+    <button><a href="/horses">Go Back to All Horses</a></button>
+    <button><a href="/horses/<%= @horse.id %>/edit">Edit this Horse</a></button>
+    <form action="/horses/<%= @horse.id %>" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" value="Delete this Horse"/>
+    </form>
+  </body>
+
+</html>

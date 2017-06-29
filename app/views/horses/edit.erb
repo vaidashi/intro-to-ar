@@ -1,0 +1,20 @@
+
+
+<html>
+  <head>
+    <link rel="stylesheet" href="/css/application.css">
+    <title>Use the form below to change your horse</title>
+  </head>
+  <body>
+<form action="/horses/<%= @horse.id %>" method="post">
+  <p>Edit Horse</p>
+  <input type="hidden" name="_method" value="PUT" />
+  <input type='text' name='horse[name]' value="<%= @horse.name %>"/>  Name <br/>
+  <input type='text' name='horse[age]' value="<%= @horse.age %>"/> Age <br/>
+  <input type='text' name='horse[total_winnings]' value="<%= @horse.total_winnings %>"/> Total Winnings <br/>
+  <input type='text' name='horse.[breed_id]' value="<%= @horse.breed_id %>"/> Breed <br/>
+  <input type='text' name='horse.[jockey_id]' value="<%= @horse.jockey_id %>"/> Jockey <br/>
+  <input type='submit'/>
+</form>
+</body>
+</html>

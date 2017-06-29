@@ -5,12 +5,14 @@
 <body>
   <header>
     <h1> All of My Horses </h1>
+    <button><a href="/horses/new">Create a New Horse</a></button>
   </header
+
   <% @horses.each do |horse| %>
     <h3><a href="/horses/<%= horse.id %>"><%= horse.name %></a></h3>
-    <p><%= horse.age %></p>
+    <!-- <p><%= horse.age %></p>
     <p><%= horse.total_winnings %></p>
-    <p><%= horse.breed_id %></p>
-    
+    <p><%= horse.breed_id %></p> -->
+
   <% end %>
 </body>
