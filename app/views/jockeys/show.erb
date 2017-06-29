@@ -2,13 +2,16 @@
 
 <body>
   <header>
-    <h1> This Jockey's Horses </h1>
+    <h1><%= @jockey.name %>'s Horses </h1>
   </header
-  <% @jockey.horses.each do |horse| %>
+  <% @horses.each do |horse| %>
     <h3><a href="/horses/<%= horse.id %>"><%= horse.name %></a></h3>
-    <p><%= horse.age %></p>
-    <p><%= horse.total_winnings %></p>
-    <p><%= horse.breed_id %></p>
+    <p>Age: <%= horse.age %></p>
+    <p>Winning Amount: $<%= horse.total_winnings %></p>
+    <p>Type of Horse: <%= horse.breed.name %></p>
 
   <% end %>
+
+  <h3>Total amount won by Jockey: $<%= @jockey_winnings %> </h3>
+  <h3>Average amount won per race: $<%= @jockey_winning_average %> </h3>
 </body>
